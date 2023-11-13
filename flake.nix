@@ -23,7 +23,7 @@
           sha256 = "sha256-0gYK1p+HSB8N2oLt5scMO2WvpvG/BuLBB8Ljc9JtksI=";
         };
 
-        nativeBuildInputs = [ pkgs.autoPatchelfHook ];
+        nativeBuildInputs = [ pkgs.autoPatchelfHook pkgs.zlib pkgs.bzip2 ];
         buildInputs = [ stdenv.cc.cc.lib pkgs.zlib pkgs.bzip2 ];
         installPhase = ''
           runHook preInstall
